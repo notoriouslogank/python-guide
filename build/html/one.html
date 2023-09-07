@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Lesson One</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="_static/documentation_options.js?v=e259d695"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Lesson Two" href="two.html" />
+  <link rel="prev" title="Welcome to This Random Ass documentation!" href="index.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">python and maybe some linux shit</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-this-random-ass-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Lesson One</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#setup" class="reference internal">Setup</a></li>
+                
+                  <li class="toctree-l2"><a href="#python3" class="reference internal">Python3</a></li>
+                
+                  <li class="toctree-l2"><a href="#vscode" class="reference internal">VSCode</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="two.html" class="reference internal ">Lesson Two</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Lesson One</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to This Random Ass documentation!</a>
+  </li>
+  <li class="next">
+    <a href="two.html"
+       title="next chapter">Lesson Two →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="lesson-one">
+<h1>Lesson One<a class="headerlink" href="#lesson-one" title="Link to this heading">¶</a></h1>
+<div class="admonition-a-note-from-the-author admonition">
+<p class="admonition-title">A Note from the Author:</p>
+<p>I would like to state now, for the Record, that I am by no
+means qualified to write this.  I’m still baffled every single
+day by <em>something</em> in Python.  I often have <strong>no idea</strong> how to
+do whatever it is I’m trying to do.</p>
+<p>But I fucked around a whole bunch, and I <em>think</em> I maybe ‘get it’
+enough to at least point you in the right direction.  And anyway,
+I’ve had fun writing (well, mostly <em>formatting</em>, all of this).</p>
+<p>Good luck!</p>
+</div>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">¶</a></h2>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h3>
+<p>If you’re running Linux, you (probably) have Python installed by defualt.  For the purposes of this ‘lesson’, I’m going to just assume you’re using something Debian-based (and thus use <code class="docutils literal notranslate"><span class="pre">apt</span></code> as your package manager).</p>
+<p>You can check by opening a terminal and running the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">which python</span>
+</pre></div>
+</div>
+<p>You should get the following output to the terminal:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Yours could be ../python or ../python3.x.x are acceptable as well</span><a class="headerlink" href="#id3" title="Link to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> /usr/bin/python3</span>
+</pre></div>
+</div>
+</div>
+<p>(You may get some variant of this: /usr/bin/python, /usr/bin/python3.11.)</p>
+<p>If you don’t get a return, we’ll need to go ahead and install Python:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update &amp;&amp; sudo apt full-upgrade -y</span>
+<span class="go">sudo apt install python3</span>
+</pre></div>
+</div>
+<p>Note that your installation <em>may</em> be in a different location; as long as you get a return on the <code class="docutils literal notranslate"><span class="pre">which</span></code> command, you have Python installed.  Next, let’s check which version of Python you’re running; run the following in terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python --version</span>
+</pre></div>
+</div>
+<p>If the above command fails (command not found), try:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 --version</span>
+</pre></div>
+</div>
+<p>If you get a return <strong>now</strong>, then you need to remember that in your configuration you need to run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 [command]</span>
+</pre></div>
+</div>
+<p>as opposed to</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python [command]</span>
+</pre></div>
+</div>
+<p>(You can alias python3 to python by editing your .bashrc file; a quick Google should give you the info you need.)</p>
+</section>
+<section id="git">
+<h3>Git<a class="headerlink" href="#git" title="Link to this heading">¶</a></h3>
+<p>Now that we’ve got the Python interpreter installed and up to date, let’s make sure we have a few git installed (more on this later):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update &amp;&amp; sudo apt full-upgrade -y</span>
+<span class="go">sudo apt install git</span>
+</pre></div>
+</div>
+<p>That’ll get git support running for you, but there’s another package that I highly recommend: the GitHub CLI client.  While <code class="docutils literal notranslate"><span class="pre">git</span></code> will be fine for <em>most</em> of what we need to do with it, it doesn’t really support credential management, which we’re going to need to, for instance, download private repositories or push git packages to your GitHub account (without having to navigate to the website, login, yada yada).  Installing GitHub CLI can be a slight pain in the ass, so be very careful when copying the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">type -p curl &gt;/dev/null || (sudo apt update &amp;&amp; sudo apt install curl -y)</span>
+<span class="go">curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg</span>
+<span class="go">sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg</span>
+<span class="go">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main&quot; | sudo tee /etc/apt/sources.list.d/github-cli.list &gt; /dev/null</span>
+<span class="go">sudo apt update</span>
+<span class="go">sudo apt install gh -y</span>
+</pre></div>
+</div>
+<p>Like I said, it’s a lot of finicky, esoteric CLI stuff.  However, you shouldn’t have too much trouble – and it’s not the absolute end of the world if you can’t get <code class="docutils literal notranslate"><span class="pre">gh</span></code> installed (though, again, it’d be super nice to have).</p>
+<p>Assuming you <em>did</em> get it installed, we’ll go ahead and setup your account so we don’t have to fuck with it later.  Run the following command and then follow the on-screen prompt(s):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gh auth login</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When asked, I’d suggest logging in via web browser as opposed to an auth key, just because the latter is kind of a huge pain in the ass in my experience; YMMV.</p>
+</div>
+<p>That should be about all we need right now to at least get started running some Python code.  We’ll install our IDE [Integrated Development Environment, <em>probably</em>] here in a minute.</p>
+</section>
+</section>
+<section id="python3">
+<h2>Python3<a class="headerlink" href="#python3" title="Link to this heading">¶</a></h2>
+<section id="interactive">
+<h3>Interactive<a class="headerlink" href="#interactive" title="Link to this heading">¶</a></h3>
+<p>So Python can be run in a couple of different ways.  The way you’re probably already (at least marginally) aware of is as a script, or a package, or an application – really all the same thing, just with different sizes and layers of complexity.</p>
+<p>For the moment, though, let’s loook at the <em>other</em> way we can run Python: in an interactive environment!</p>
+<p>When we run Python interactively, we evaluate our commands in real time (as opposed to running a program, where everything happens step by step as written.)</p>
+<p>Go ahead and open a terminal and run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3</span>
+</pre></div>
+</div>
+<p>You should get some lines of info that look something like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3</span>
+<span class="go">Python 3.11.2 (main, Mar 13 2023, 12:18:29) [GCC 12.2.0] on linux</span>
+<span class="go">Type &#39;help&#39;, &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information.</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>Notice that your prompt has changed to &gt;&gt;&gt;.  This means you’re now running the Python interactive interpreter.  It can take commands just like your regular terminal – although the commands are entirely different, since Python has its own syntax, of course.</p>
+<p>Let’s try a couple commands now:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition-syntax-highlighting admonition">
+<p class="admonition-title">Syntax Highlighting</p>
+<p>From here on out, if it’s Python code (as opposed to bash/terminal commands), it’ll be colorized syntactically to make it easier to see what’s going on, as well as to disambiguate it from bash code.</p>
+</div>
+<p>If everything’s working correctly, it should print “Hello world” to the console:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="go">Hello world</span>
+</pre></div>
+</div>
+<p>There – your first Python command!  Congratulations, I guess!</p>
+</section>
+<section id="baby-s-first-method">
+<h3>Baby’s First Method<a class="headerlink" href="#baby-s-first-method" title="Link to this heading">¶</a></h3>
+<p>So, obviously, printing a message to the console is literally the least interesting thing we could do in Python.  Let’s get just a tiny bit more interesting:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gp">&gt;&gt;&gt; </span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;Hello world&quot;</span>
+<span class="linenos">2</span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="linenos">3</span><span class="go">Hello world</span>
+</pre></div>
+</div>
+<p>So what did we do here?  Well, <code class="docutils literal notranslate"><span class="pre">message=&quot;Hello</span> <span class="pre">world&quot;</span></code> is an example of <em>assigning a variable</em>.</p>
+<p>On line 1 we create (<em>instantiate</em>) the variable (<code class="docutils literal notranslate"><span class="pre">message</span></code>) and assign it (<code class="docutils literal notranslate"><span class="pre">=</span></code>) the <em>value</em> <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">world&quot;</span></code>.</p>
+<p>On line 2 we tell Python to use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> <em>method</em> to display the <em>value</em> of our <em>variable</em>, <code class="docutils literal notranslate"><span class="pre">message</span></code> – in this instance, <code class="docutils literal notranslate"><span class="pre">message</span></code> is the <em>argument</em> we’re <em>passing to</em> the <code class="docutils literal notranslate"><span class="pre">print()</span></code> <em>method</em>.</p>
+</section>
+<section id="vocab">
+<h3>Vocab<a class="headerlink" href="#vocab" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>argument</dt><dd><p>The ‘thing’ which is being acted upon by a <strong>method</strong> or <strong>function</strong> call;
+in this case – but not <em>necessarily</em> – it’s our <strong>variable</strong>, <code class="docutils literal notranslate"><span class="pre">message</span></code>.</p>
+</dd>
+<dt>function</dt><dd><p>A collection of various <strong>methods</strong> ran in sequence.</p>
+</dd>
+<dt>instantiate</dt><dd><p>To create an ‘object’.</p>
+</dd>
+<dt>method</dt><dd><p>A way of doing a thing.  <code class="docutils literal notranslate"><span class="pre">print()</span></code> is a <strong>method</strong>; when we ‘use’
+a <strong>method</strong>, we say we <em>called</em> the <strong>method</strong></p>
+</dd>
+<dt>parameter</dt><dd><p>The generic name for what a <strong>function</strong> or <strong>method</strong> call <em>takes</em> as its’
+argument.  In the case of <code class="docutils literal notranslate"><span class="pre">print()</span></code>, it has no defined <strong>parameters</strong>:
+you can enter <em>any</em> <strong>value</strong> inside the parenthesis and it’ll (mostly)
+work.</p>
+</dd>
+<dt>value</dt><dd><p>The actual <em>content</em> of a <strong>variable</strong>; what that <strong>variable</strong> is ‘worth’ –
+in this example, our <strong>variable</strong>’s <strong>value</strong> is <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">world&quot;</span></code>.</p>
+</dd>
+<dt>variable</dt><dd><p>An object that can store <strong>value</strong>.  In our case, <code class="docutils literal notranslate"><span class="pre">message</span></code> is the
+variable, but we could just as easily have called our variable <code class="docutils literal notranslate"><span class="pre">Frank</span></code>,
+and it’d still have worked as intended.</p>
+</dd>
+</dl>
+<div class="admonition-overwhelmed-yet admonition">
+<p class="admonition-title">Overwhelmed Yet?</p>
+<p>We’re going to get back to setting up your PC now so we can call Lesson One “finished”,
+but I just wanted you to have seen and heard some of this stuff before we move on.  Plus,
+I wanted you to check out the interactive shell – we won’t be using it much going
+forward.</p>
+</div>
+</section>
+</section>
+<section id="vscode">
+<h2>VSCode<a class="headerlink" href="#vscode" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Okay, I’m going to <em>try</em> to make this as straightforward as possible – hopefully nothing gets too fucky, but I’ve had some problems in the past installing VSCode on certain distros.  Debian-based distros (like Ubuntu) <em>tend</em> to work alright, but who knows?</p>
+<p>So, first things first, go to the website and download the .deb from <a class="reference external" href="https://code.visualstudio.com/download">VSCode</a>.</p>
+<p>Once you’ve got the .deb downloaded, open a terminal and navigate to whatever directory the .deb is located in (probably ~/downloads, but YMMV).</p>
+<p>When you’re in the directory, go ahead and run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install ./&lt;filename&gt;.deb</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There’s a (small) chance the above command fails; this is probably due to an issue with apt.  If it does, you might need to run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dpkg</span> <span class="pre">-i</span> <span class="pre">&lt;filename.deb&gt;</span></code> to depackage the files and then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">-f</span></code> to download the dependencies.  Probably won’t come to that, though.</p>
+</div>
+<p>After you’ve completed the dependency install (using either of the two above methods), there’s one more package we need to pick up, and then we can install VSCode.  Run the following:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install apt-transport-https</span>
+<span class="go">sudo apt update &amp;&amp; sudo apt upgrade -y</span>
+<span class="go">sudo apt install code</span>
+</pre></div>
+</div>
+<p>At this point, you should have VSCode installed correctly.  You can check it by either opening it through your file manager (like the Windows Start menu sort of thing) or, my preferred method, you can open it via terminal with the command <code class="docutils literal notranslate"><span class="pre">code</span></code>.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If you open it via terminal, running the command <code class="docutils literal notranslate"><span class="pre">code</span></code> will open VSCode to its default Welcome screen.  This is fine, but sometimes (usually), you might find it easier to run it with <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">.</span></code>.  This will open <em>any editable files in the current directory</em> in VSCode, so be cognizant of what directory you’re in when you run it that way or you might be in for a helluva long load time.</p>
+</div>
+<p>So, assuming you have VSCode up and running correctly, we should now be more-or-less ready to start actually learning to code – onward!</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to This Random Ass documentation!</a>
+  </li>
+  <li class="next">
+    <a href="two.html"
+       title="next chapter">Lesson Two →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2023, logank.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

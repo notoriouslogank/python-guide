@@ -1,0 +1,82 @@
+##########
+Lesson Two
+##########
+
+
+*************************
+Let's Do Some Python Shit
+*************************
+
+Okay, so you're in VSCode.  You might have to faff about with some settings, but it should pretty much be good to go right off the bat.  If it asks you to point to a Python interpreter, just run that ``which`` command like we did earlier -- that's the Path to your interpreter; that's the thing that gets called when you run the command ``python3 [whatever command]``.
+
+.. warning::
+    Don't confuse the path to your interpreter with the PATH environment variable, which is a list of modules a particular Python installation can access. [Eventually this will link to something relevant.]
+
+So hopefully, maybe, you've made your way to a new file in VSCode.  Maybe you can type in the file?  Fuck, look, this part sucks so you're going to have to figure some of this shit out for yourself in terms of the setting up, but I can help answer questions.
+
+So we've already talked a little bit about running commands interactively; now we're going to look at running commands in the editor.  It's essentially the same thing, but there's a bit more you can do with sort of interacting *across* python files.   You'll see what I mean by and by.
+
+So, let's start with the same command we ran last time.  Open a new file in VSCode, and name it <whatever name you want to call it>.py - [link to python naming conventions].  Enter the same code we ran earlier:
+
+.. code-block::
+
+    print('Hello world')
+
+Save your project, and then at the top bar of VSCode, go to terminal>run without debugging.  You should see it open in a terminal inside VSCode at the bottom of the pane.
+
+.. note::
+    You can also open a new terminal and navigate to the file you've just created, and run:
+
+    .. code-block:: console
+
+        python3 <whatever yours is called>.py
+
+So you should get the expected return:
+
+.. code-block::
+
+    print('Hello world')
+    Hello world
+
+Remembering our earlier discussion, you may recall that we can **declare a variable** with whatever value we'd like, and print that with ease as well:
+
+.. code-block:: python
+
+    x = 'Goodbye cruel world'
+    print(x)
+
+Bear in mind that we have to define the variable before we can call it.  What happens if we try this:
+
+.. code-block:: python
+
+    print(x)
+    x = 'Goodbye cruel world'
+
+We can do this with multiple variables:
+
+.. code-block:: python
+
+    x = 'Logank'
+    y = 'TheNotorious'
+
+    print(x + y)
+    
+*****************************
+What the Fuck is a Data Type?
+*****************************
+
+So far, all we've assigned to our variables are words -- **strings**, in other words.  When we ``print(x + y)``, you'll notice we're **concatenating** the values, **not** summing them.  The reason is that we can't perform mathematical operations with **strings** -- for that, we'll need something like an **integer**:
+
+.. code-block:: python
+
+    a = '1'
+    b = '2'
+
+    x = 1
+    y = 2
+
+    print(x+y)
+    print(a+b)
+
+    
+
